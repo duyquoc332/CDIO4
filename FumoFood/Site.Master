@@ -14,7 +14,84 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        /* Header màu xanh */
+        .fumo-header {
+            background-color: #A2D998; /* Màu xanh lá nhạt giống ảnh */
+            padding: 15px 0;
+            border-bottom: 1px solid #8BC380;
+        }
+        
+        .fumo-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2E7D32;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .fumo-logo:hover { text-decoration: none; color: #1B5E20; }
 
+        /* Ô tìm kiếm */
+        .search-box {
+            position: relative;
+        }
+        .search-box .form-control {
+            border-radius: 20px;
+            padding-left: 35px;
+        }
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #888;
+        }
+
+        /* Các icon bên phải (Điện thoại, Giỏ hàng) */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        .icon-btn {
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+        .btn-login {
+            background-color: white;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 20px;
+            font-weight: bold;
+        }
+
+        /* Footer màu xanh đậm hơn */
+        .fumo-footer {
+            background-color: #98C68A; 
+            padding: 20px 0;
+            margin-top: 30px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            width: 100%;
+        }
+        
+        /* Body background */
+        body {
+            background-color: #f9fdf9; /* Màu nền hơi xanh rất nhạt cho toàn trang */
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -38,33 +115,46 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="fumo-header">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/" class="fumo-logo">
+                            <span class="glyphicon glyphicon-leaf" style="margin-right:10px;"></span>
+                            FUMO FOOD
+                        </a>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="search-box">
+                            <span class="glyphicon glyphicon-search search-icon"></span>
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Tìm kiếm..."></asp:TextBox>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 header-actions">
+                        <a href="#" class="icon-btn"><span class="glyphicon glyphicon-earphone"></span></a>
+                        <a href="#" class="icon-btn"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <a href="#" class="btn btn-login">Đăng Nhập</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
         </div>
+        <hr />
+
+        <footer class="fumo-footer">
+            <div class="container"> 
+                <div class="footer-content">
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+                    <p>Liên hệ: 0905 xxx xxx</p>
+                </div>
+            </div>
+        </footer>
+        
 
     </form>
 </body>
