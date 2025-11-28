@@ -64,7 +64,6 @@ I:\cdio4\FumoFood\FumoFood\bin\Newtonsoft.Json.xml
 I:\cdio4\FumoFood\FumoFood\bin\Antlr3.Runtime.pdb
 I:\cdio4\FumoFood\FumoFood\bin\Microsoft.AspNet.FriendlyUrls.xml
 I:\cdio4\FumoFood\FumoFood\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-I:\cdio4\FumoFood\FumoFood\obj\Debug\FumoFood.csprojAssemblyReference.cache
 I:\cdio4\FumoFood\FumoFood\obj\Debug\FumoFood.csproj.CoreCompileInputs.cache
 I:\cdio4\FumoFood\FumoFood\obj\Debug\FumoFood.csproj.CopyComplete
 I:\cdio4\FumoFood\FumoFood\obj\Debug\FumoFood.dll

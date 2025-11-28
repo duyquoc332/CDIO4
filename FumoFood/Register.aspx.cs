@@ -88,5 +88,10 @@ namespace FumoFood
             txtPassword.Text = "";
             txtConfirmPassword.Text = "";
         }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
