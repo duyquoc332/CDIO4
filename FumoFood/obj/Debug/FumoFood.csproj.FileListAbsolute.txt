@@ -140,3 +140,5 @@ C:\Me\CDIO4\FumoFood\obj\Debug\FumoFood.csproj.CoreCompileInputs.cache
 C:\Me\CDIO4\FumoFood\obj\Debug\FumoFood.csproj.CopyComplete
 C:\Me\CDIO4\FumoFood\obj\Debug\FumoFood.dll
 C:\Me\CDIO4\FumoFood\obj\Debug\FumoFood.pdb
+D:\Git\CDIO4\FumoFood\obj\Debug\FumoFood.dll
+D:\Git\CDIO4\FumoFood\obj\Debug\FumoFood.pdb
