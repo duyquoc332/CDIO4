@@ -18,7 +18,7 @@ namespace FumoFood
         {
             // TODO: Load actual product details from database
             // For demo purposes, we'll use hardcoded values
-            /*
+            
             string productId = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(productId))
             {

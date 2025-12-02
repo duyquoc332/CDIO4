@@ -67,7 +67,7 @@ namespace FumoFood
             // TODO: Implement database saving logic
             // Example using ADO.NET or Entity Framework
 
-            /*
+            
             string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -87,7 +87,7 @@ namespace FumoFood
                     cmd.ExecuteNonQuery();
                 }
             }
-            */
+            
         }
 
         private void SendEmailNotification(string fullName, string email, string phone, string message)
@@ -95,7 +95,7 @@ namespace FumoFood
             // TODO: Implement email sending logic
             // This is optional and depends on your email configuration
 
-            /*
+            
             try
             {
                 MailMessage mail = new MailMessage();

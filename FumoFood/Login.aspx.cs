@@ -53,7 +53,7 @@ namespace FumoFood
             return (username == "demo" && password == "demo");
 
             // Code thực tế có thể như sau:
-            /*
+            
             string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionString"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -67,7 +67,7 @@ namespace FumoFood
                     return count > 0;
                 }
             }
-            */
+            
         }
     }
 }
