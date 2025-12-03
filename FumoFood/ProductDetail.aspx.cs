@@ -26,7 +26,7 @@ namespace FumoFood
                 // imgProduct.ImageUrl = product.ImageUrl;
                 // etc.
             }
-            */
+            
         }
 
         protected void btnAddToCart_Click(object sender, EventArgs e)

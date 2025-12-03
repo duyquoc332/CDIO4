@@ -125,7 +125,7 @@ namespace FumoFood
                 // Log email error but don't show to user
                 System.Diagnostics.Debug.WriteLine($"Email sending error: {ex.Message}");
             }
-            */
+            
         }
 
         private void ShowMessage(string message, bool isSuccess)
