@@ -163,7 +163,7 @@ namespace FumoFood
                 Session["OrderSuccess"] = true;
                 Response.Redirect("OrderSuccess.aspx");
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
                 // Log error
                 ShowErrorMessage("Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.");
