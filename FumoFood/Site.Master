@@ -86,7 +86,79 @@
             color: #333;
             width: 100%;
         }
-        
+
+        .content-wrapper {
+            display: flex; /* Đặt các phần tử con trên cùng một hàng */
+            flex-direction: row;
+            width: 100%;
+            margin-top: 20px;
+            gap: 20px; /* Tạo khoảng cách giữa hai cột */
+        }
+
+        /* 2. Định kiểu cho Sidebar (1/4) */
+        .sidebar-1-4 {
+            flex: 0 0 25%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 25% */
+            padding: 15px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            order: 1; /* CHUYỂN CỘT NÀY SANG TRÁI */
+        }
+
+        .sidebar-1-4 h3{
+            background-color: #8BC34A;
+            color: white;
+            padding: 10px;
+        }
+
+        /* 3. Định kiểu cho Main Content (3/4) */
+        .main-content-3-4 {
+            flex: 1; /* Cho phép nó mở rộng phần còn lại */
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+            order: 2; /* CHUYỂN CỘT NÀY SANG PHẢI */
+        }
+
+        #Datalist1{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .dmsp{
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
+            background-color: #F8F8F8;
+            transition: all 0.2s ease;
+        }
+
+        .dmsp:hover{
+            transform: scale(1.1)
+        }
+
+        .hinhsp{
+            width: 200px;
+            height: 250px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .hinhsp:hover{
+            transform: scale(1.1)
+        }
+        .gia{
+            color: red;
+            font-weight: 600;
+        }
+        .mainsp{
+            padding: 20px;
+            text-align: center;
+        }
+
         /* Body background */
         body {
             background-color: #f9fdf9; /* Màu nền hơi xanh rất nhạt cho toàn trang */
@@ -140,8 +212,41 @@
                 </div>
             </div>
         </div>
+
+        <div class="content-wrapper">
+                    <div class="sidebar-1-4">
+                        <h3>Danh Mục Sản Phẩm</h3>
+                        <asp:DataList ID="DataList1" runat="server" OnItemCommand="DataList1_ItemCommand">
+                            <ItemTemplate>
+                                <div class="dmsp">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandName="chonDM" CommandArgument='<%# Eval("MaDanhMuc") %>' Text='<%# Eval("TenDanhMuc") %>'></asp:LinkButton>
+                                </div>
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+
+                    <div class="main-content-3-4">
+                        <h3>Danh Sách Sản Phẩm</h3>
+                        <asp:DataList ID="DataList2" runat="server" RepeatColumns="4" CellPadding="10">
+                            <ItemTemplate>
+                                <div class="mainsp">
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("TenSanPham") %>'></asp:Label>
+                                    <br />
+                                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# "~/Images/" + Eval("HinhAnh") %>' CssClass="hinhsp" />
+                                    <br />
+                                    Đơn giá:
+                                <span class="gia">
+                                    <%# Eval("Gia") %>
+                                </span>
+                                </div>
+
+                            </ItemTemplate>
+                        </asp:DataList>
+                    </div>
+                </div>
+
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">                                                
             </asp:ContentPlaceHolder>
         </div>
         <hr />

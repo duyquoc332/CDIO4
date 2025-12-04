@@ -106,6 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Cart.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="Contact.aspx" />
@@ -126,6 +130,28 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\bapcai.png" />
+    <Content Include="Images\Bo.png" />
+    <Content Include="Images\BotOt.png" />
+    <Content Include="Images\CamSanh.png" />
+    <Content Include="Images\carot.png" />
+    <Content Include="Images\chuoi.png" />
+    <Content Include="Images\DauTay.png" />
+    <Content Include="Images\DuaHau.png" />
+    <Content Include="Images\MangCut.png" />
+    <Content Include="Images\Muop.png" />
+    <Content Include="Images\NamDuiGa.png" />
+    <Content Include="Images\NamHuongTuoi.png" />
+    <Content Include="Images\saurieng.png" />
+    <Content Include="Images\sua1.png" />
+    <Content Include="Images\Tao.png" />
+    <Content Include="Images\TaoXanh.png" />
+    <Content Include="Images\thitbo.png" />
+    <Content Include="Images\thitcahoi.png" />
+    <Content Include="Images\thitcangu.png" />
+    <Content Include="Images\thitheo.png" />
+    <Content Include="Images\toi.png" />
     <Content Include="ProductDetail.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\logo.png" />
@@ -210,6 +236,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,10 +286,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="XuLyKetNoi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\" />
-    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
