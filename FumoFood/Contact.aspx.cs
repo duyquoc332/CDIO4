@@ -13,5 +13,17 @@ namespace FumoFood
         {
 
         }
+        protected void btnSend_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            string email = txtEmail.Text;
+            string phone = txtPhone.Text;
+            string message = txtMessage.Text;
+
+            // Thông báo giả lập (chưa lưu DB)
+            Response.Write("<script>alert('Gửi tin nhắn thành công! Cảm ơn bạn đã liên hệ với FUMO FOOD');</script>");
+
+            txtName.Text = txtEmail.Text = txtPhone.Text = txtMessage.Text = "";
+        }
     }
 }

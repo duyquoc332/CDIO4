@@ -133,7 +133,7 @@
                     </div>
 
                     <div class="col-md-4 header-actions">
-                        <a href="#" class="icon-btn"><span class="glyphicon glyphicon-earphone"></span></a>
+                        <a href="Contact.aspx" class="icon-btn"><span class="glyphicon glyphicon-earphone"></span></a>
                         <a href="#" class="icon-btn"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                         <a href="Login.aspx" class="btn btn-login">Đăng Nhập</a>
                     </div>
